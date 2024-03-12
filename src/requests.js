@@ -5,8 +5,6 @@ async function getMovieData(movieName) {
   );
 
   let data = await response.json();
-
-  console.log(data);
+  return data;
 }
-
-getMovieData("Lorax");
+export default getMovieData;

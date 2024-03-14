@@ -2,9 +2,15 @@
   --color-top-grey: #ecf0f3;
   --color-shadow-grey: #d1d9e6;
 }
-.movie {
+
+body {
   font-family: Arial, Helvetica, sans-serif;
   color: grey;
+}
+::selection {
+  background-color: var(--color-shadow-grey);
+}
+.movie {
   box-sizing: border-box;
   max-width: 550px;
   background-color: var(--color-top-grey);
@@ -31,9 +37,10 @@
   border-radius: 0.75rem;
   height: 100%;
   opacity: 0.8;
+  object-fit: cover;
 }
 .reviewForm textarea {
-  min-width: 96%;
+  width: 96%;
   max-width: 96%;
   padding: 0.5rem;
   border-color: lightgrey;
@@ -60,4 +67,21 @@
 .reviewForm button:hover {
   transition: all 0.1s ease-out;
   background-color: white;
+}
+
+.searchbar form {
+  background-color: var(--color-top-grey);
+  box-shadow: 18px 18px 30px 0px rgba(209, 217, 230, 1);
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 75% 1fr;
+  column-gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+.searchbar input[type="text"] {
+  border: 1px solid lightgrey;
+}
+.searchbar button {
+  border: 1px solid lightgrey;
+  color: grey;
 }

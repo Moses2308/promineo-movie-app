@@ -1,17 +1,63 @@
+:root {
+  --color-top-grey: #ecf0f3;
+  --color-shadow-grey: #d1d9e6;
+}
 .movie {
+  font-family: Arial, Helvetica, sans-serif;
+  color: grey;
   box-sizing: border-box;
-  max-width: 500px;
-  background-color: lightgrey;
+  max-width: 550px;
+  background-color: var(--color-top-grey);
   padding: 1rem;
   border-radius: 1rem;
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr 1fr;
+  box-shadow: 18px 18px 30px 0px rgba(209, 217, 230, 1);
+}
+.movie__info {
+  box-shadow: inset 18px 18px 30px 0px rgba(209, 217, 230, 1);
+  padding: 1rem;
+  border-radius: 0.5rem;
 }
 .movie__rating {
+  padding: 1rem;
+  border-radius: 0.5rem;
   grid-column-start: -3;
   grid-column-end: -1;
+  box-shadow: inset 18px 18px 30px 0px rgba(209, 217, 230, 1);
 }
 .movie--poster {
   border-radius: 0.75rem;
+  height: 100%;
+  opacity: 0.8;
+}
+.reviewForm textarea {
+  min-width: 96%;
+  max-width: 96%;
+  padding: 0.5rem;
+  border-color: lightgrey;
+  border-radius: 0.5rem;
+  background-color: var(--color-top-grey);
+  box-shadow: 18px 18px 30px 0px rgba(209, 217, 230, 1);
+}
+.reviewForm textarea:active,
+.reviewForm:focus {
+  border-color: grey;
+}
+.reviewForm button {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin: 0.5rem auto;
+  border: none;
+  color: grey;
+  box-shadow: 18px 18px 30px 0px rgba(209, 217, 230, 1);
+  border: 1px solid lightgrey;
+  padding: 0.5em 1em;
+  border-radius: 0.5rem;
+}
+.reviewForm button:hover {
+  transition: all 0.1s ease-out;
+  background-color: white;
 }

@@ -1,13 +1,13 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import "./index.css";
 import "./App.css";
+import getMovieData from "./requests";
 import Movie from "./components/Movie";
 
+const movie = await getMovieData("one piece");
 function App() {
   return (
     <>
-      <Movie></Movie>
+      <Movie {...movie}></Movie>
     </>
   );
 }

@@ -1,3 +1,4 @@
+import Stars from "../Stars";
 import Review from "./Review";
 import ReviewForm from "./ReviewForm";
 import ReviewList from "./ReviewList";
@@ -19,6 +20,7 @@ export default function Movie(props) {
           <h3>Synopsis</h3>
           <p className="movie--synopsis">{props.Plot}</p>
         </div>
+        <Stars></Stars>
         <ReviewList {...reviewWrapper}></ReviewList>
         <div className="movie__rating">
           <ReviewForm {...reviewWrapper}></ReviewForm>

@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <SearchBar {...listWrapper}></SearchBar>
-      {movieList}
+      <div className="movie-container">{movieList}</div>
     </>
   );
 }

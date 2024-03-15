@@ -1,7 +1,16 @@
-export default function ReviewForm() {
+import Review from "./Review";
+
+export default function ReviewForm(props) {
   function handleSubmit(event) {
-    console.log(event.target.userReview.value);
     event.preventDefault();
+    const userReview = event.target.userReview.value;
+    const newReviewList = [...props.reviewList];
+    const newReview = (
+      <Review reviewContent={userReview} key={newReviewList.length}></Review>
+    );
+    newReviewList.push(newReview);
+    props.setReviewList(newReviewList);
+    event.target.userReview.value = "";
   }
 
   return (
@@ -10,7 +19,9 @@ export default function ReviewForm() {
         <p>User Review : </p>
         <textarea name="userReview" id="" cols="40" rows="3"></textarea>
         <br />
-        <button type="submit">Submit Review</button>
+        <div className="reviewForm__buttons">
+          <button type="submit">Submit</button>
+        </div>
       </form>
     </>
   );

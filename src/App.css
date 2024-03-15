@@ -29,9 +29,9 @@ body {
 .movie__rating {
   padding: 1rem;
   border-radius: 0.5rem;
+  box-shadow: inset 18px 18px 30px 0px rgba(209, 217, 230, 1);
   grid-column-start: -3;
   grid-column-end: -1;
-  box-shadow: inset 18px 18px 30px 0px rgba(209, 217, 230, 1);
 }
 .movie--poster {
   border-radius: 0.75rem;
@@ -48,14 +48,12 @@ body {
   background-color: var(--color-top-grey);
   box-shadow: 18px 18px 30px 0px rgba(209, 217, 230, 1);
 }
-.reviewForm textarea:active,
-.reviewForm:focus {
-  border-color: grey;
+.reviewForm__buttons {
+  width: fit-content;
+  margin: auto;
 }
 .reviewForm button {
   position: relative;
-  z-index: 1;
-  display: block;
   margin: 0.5rem auto;
   border: none;
   color: grey;
@@ -83,5 +81,29 @@ body {
 }
 .searchbar button {
   border: 1px solid lightgrey;
+  color: grey;
+}
+.reviewList {
+  grid-column-start: -3;
+  grid-column-end: -1;
+}
+.review {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: inset 18px 18px 30px 0px rgba(209, 217, 230, 1);
+  display: grid;
+  grid-template-columns: 80% 1fr;
+}
+.review p {
+  background-color: var(--color-top-grey);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+  box-shadow: 18px 18px 30px 0px rgba(209, 217, 230, 1);
+}
+button {
+  border: 1px solid lightgrey;
+  border-radius: 0.5rem;
   color: grey;
 }

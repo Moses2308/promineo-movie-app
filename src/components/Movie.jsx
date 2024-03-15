@@ -1,6 +1,12 @@
+import Review from "./Review";
 import ReviewForm from "./ReviewForm";
+import ReviewList from "./ReviewList";
+import { useState } from "react";
 
-function Movie(props) {
+export default function Movie(props) {
+  const [reviewList, setReviewList] = useState([]);
+  const reviewWrapper = { reviewList, setReviewList };
+
   return (
     <>
       <article className="movie">
@@ -13,12 +19,11 @@ function Movie(props) {
           <h3>Synopsis</h3>
           <p className="movie--synopsis">{props.Plot}</p>
         </div>
+        <ReviewList {...reviewWrapper}></ReviewList>
         <div className="movie__rating">
-          <ReviewForm></ReviewForm>
+          <ReviewForm {...reviewWrapper}></ReviewForm>
         </div>
       </article>
     </>
   );
 }
-
-export default Movie;

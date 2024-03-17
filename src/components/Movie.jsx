@@ -1,4 +1,4 @@
-import Stars from "../Stars";
+import Stars from "./Stars";
 import Review from "./Review";
 import ReviewForm from "./ReviewForm";
 import ReviewList from "./ReviewList";
